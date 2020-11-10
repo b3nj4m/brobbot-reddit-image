@@ -6,7 +6,7 @@ A brobbot plugin for image searches.
 brobbot image <query>
 ```
 
-Searches Reddit for `query` and returns 1st image result's URL.
+Searches Reddit for `query` and returns an image result's URL.
 
 ## Configuration
 

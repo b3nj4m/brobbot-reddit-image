@@ -17,7 +17,7 @@ const PASSWORD = process.env.BROBBOT_REDDIT_IMAGE_PASSWORD;
 const SORT = process.env.BROBBOT_REDDIT_IMAGE_SORT || 'relevance';
 
 module.exports = function(robot) {
-  robot.helpCommand("brobbot image `query`", "Searches Reddit for `query` and returns 1st image result's URL.");
+  robot.helpCommand("brobbot image `query`", "Searches Reddit for `query` and returns an image result's URL.");
 
   robot.respond(/^(image|img) (.*)/i, async function(msg) {
     let url;
@@ -41,5 +41,5 @@ async function image(q) {
 
   const {data} = await reddit.get('/search', {q, limit: 20, type: 'link', sort: SORT});
   const items = data.children.map(({data: {url, post_hint}}) => ({url, post_hint})).filter(({post_hint}) => post_hint === 'image');
-  return items[0].url;
+  return items.length > 0 ? items[Math.floor(Math.random() * items.length)].url : null;
 }
