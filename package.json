@@ -1,0 +1,22 @@
+{
+  "name": "brobbot-reddit-image",
+  "version": "1.0.0",
+  "description": "brobbot plugin for reddit image search",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b3nj4m/brobbot-reddit-image.git"
+  },
+  "author": "Ben Robbins <ben.robbins@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/b3nj4m/brobbot-reddit-image/issues"
+  },
+  "homepage": "https://github.com/b3nj4m/brobbot-reddit-image#readme",
+  "dependencies": {
+    "reddit": "^1.2.1"
+  }
+}
